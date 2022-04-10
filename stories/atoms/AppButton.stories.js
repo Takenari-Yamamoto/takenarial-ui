@@ -10,6 +10,7 @@ const AppButton = (_args, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: `
     <AppButton
+      v-bind="$props"
     />
   `,
 })
@@ -18,4 +19,18 @@ const AppButton = (_args, { argTypes }) => ({
 export const Default = AppButton.bind({})
 Default.args = {
   ...Default.args,
+}
+
+// ボタンを赤くする
+export const Red = AppButton.bind({})
+Red.args = {
+  text: 'RED',
+  color: 'red',
+}
+
+// ボタンを赤くする
+export const Blue = AppButton.bind({})
+Blue.args = {
+  text: 'Blue',
+  color: 'blue',
 }

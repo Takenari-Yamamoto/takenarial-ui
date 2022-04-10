@@ -1,11 +1,27 @@
 <template>
-  <div>ボタンです</div>
+  <button
+    class="app-button"
+    :class="{ '-red': color === 'red', '-blue': color === 'blue' }"
+    @click="$emit('click')"
+  >
+    {{ text }}
+  </button>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'AppButton',
+  props: {
+    text: {
+      type: String,
+      default: 'BUTTON',
+    },
+    color: {
+      type: String,
+      default: '',
+    },
+  },
 })
 </script>
