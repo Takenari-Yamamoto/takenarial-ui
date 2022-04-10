@@ -1,5 +1,8 @@
 <template>
-  <Tutorial />
+  <div>
+    <Tutorial />
+    <AppButton />
+  </div>
 </template>
 
 <script lang="ts">

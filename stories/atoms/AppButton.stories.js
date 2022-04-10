@@ -1,12 +1,8 @@
-import AppButtonComp from '../../components/atoms/AppButton.vue'
+import AppButtonComp from '@/components/atoms/AppButton'
 
 export default {
   title: 'Components/Atoms/AppButton.vue',
   component: AppButtonComp,
-  argTypes: {
-    // text: 'Button',
-    // color: '',
-  },
 }
 
 const AppButton = (_args, { argTypes }) => ({
@@ -14,7 +10,6 @@ const AppButton = (_args, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: `
     <AppButton
-      v-bind="$props"
     />
   `,
 })
